@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <section style="display:flex; flex-direction: column; padding: 2rem;">
-        <button style="background-color: lime;" onclick="setItem()">Set Item</button>
+        <input id="item" type="text" placeholder="What do you want to by?">
+        <input id="budget" style="margin-top: 0.5rem;" type="text" placeholder="What's your budget buddy?">
+        <button style="background-color: lime; margin-top:0.5rem;" onclick="setItem()">Set Item</button>
 
 
-    <button style="background-color:red;margin-top: 0.5rem;" onclick="clearAll()">Clear Item</button>
+
+        <input id="modify-item" type="text" placeholder="What do you want to Modify?">
+        <input id="modify-budget" type="text" placeholder="Modified Budget!">
+        <button style="background-color:orange;margin-top: 0.5rem;" onclick="modifyValue()">Modify Item Value</button>
+
+        <button style="background-color:red;margin-top: 0.5rem;" onclick="clearAll()">Clear All</button>
 
 
-    
-    <button style="background-color:orange;margin-top: 0.5rem;" onclick="modifyValue()">Modify Item Value</button>
+
+
 
 
     </section>
 
     <!-- !Show Value Section Start -->
     <section>
-        <ul id="display-value-section">
-            <li type="1">item one</li>
+        <ul id="display-value-ul">
+            
         </ul>
 
     </section>
@@ -31,4 +40,5 @@
 
     <script src="./local-storage.js"></script>
 </body>
+
 </html>
