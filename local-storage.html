@@ -7,10 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="setItem()">Set Item</button>
-    <button onclick="setItem()">Clear Item</button>
+    <section style="display:flex; flex-direction: column; padding: 2rem;">
+        <button style="background-color: lime;" onclick="setItem()">Set Item</button>
 
-    <script src="./set-item.js"></script>
-    <script src="./get-item-values.js"></script>
+
+    <button style="background-color:red;margin-top: 0.5rem;" onclick="clearAll()">Clear Item</button>
+
+
+    
+    <button style="background-color:orange;margin-top: 0.5rem;" onclick="modifyValue()">Modify Item Value</button>
+
+
+    </section>
+
+    <!-- !Show Value Section Start -->
+    <section>
+        <ul id="display-value-section">
+            <li type="1">item one</li>
+        </ul>
+
+    </section>
+    <!-- !Show Value Section End -->
+
+    <script src="./local-storage.js"></script>
 </body>
 </html>
