@@ -43,7 +43,14 @@ const modifyValue = () => {
 
 
 const clearAll = () => {
+
+
+    loopLimit = localStorage.length;
+
+
     localStorage.clear();
+
+    addingItemsInUi();
 }
 
 
@@ -56,7 +63,7 @@ const clearAll = () => {
 
 
 
-const addingItemsInUi = (key, value) => {
+const addingItemsInUi = () => {
 
     let ul = document.getElementById('display-value-ul').innerHTML = ``;
 
@@ -64,11 +71,10 @@ const addingItemsInUi = (key, value) => {
 
     loopLimit = localStorage.length;
 
+
     for (key in localStorage) {
-        if (loopLimit != 1) {
-            --loopLimit;
-
-
+        if (loopLimit != 0) {
+            loopLimit--;
             value = localStorage.getItem(`${key}`);
 
 
