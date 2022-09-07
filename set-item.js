@@ -1,6 +1,2 @@
-const setItem = ()=> {
-    localStorage.setItem('name','rocko');
-}
-
-
+// localStorage.setItem('amp-ls;;migration','not me :)');
 
