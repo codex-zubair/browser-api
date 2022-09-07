@@ -24,12 +24,22 @@ const setItem = async () => {
     catch (error) {
         console.log(error)
     }
+    addingItemsInUi();
 }
 
 
 const modifyValue = () => {
-    localStorage.setItem('key', 'key value Has been changed');
-}
+    localStorage.setItem(`${document.getElementById('modify-item').value}`, `${document.getElementById('modify-budget').value}`);
+
+    addingItemsInUi();
+
+
+    document.getElementById('modify-item').value = '';
+
+    document.getElementById('modify-budget').value = '';
+
+
+};
 
 
 const clearAll = () => {
@@ -47,6 +57,8 @@ const clearAll = () => {
 
 
 const addingItemsInUi = (key, value) => {
+
+    let ul = document.getElementById('display-value-ul').innerHTML = ``;
 
 
 
@@ -74,7 +86,7 @@ const addingItemsInUi = (key, value) => {
 
             li.setAttribute('type', '1');
 
-            li.innerText =`${key} = ${value}`;
+            li.innerText = `${key} = ${value}`;
 
             ul.appendChild(li);
         }
